@@ -1,0 +1,43 @@
+REQUEST_LOGIN
+{username: str, passwordMD5: str, serverPort: int}
+{success: int, message: str}
+
+REQUEST_SIGN_UP
+{username: str, passwordMD5: str, serverPort: int}
+{success: int, message: str}
+
+REQUEST_LOGOUT
+{username: str}
+{success: int}
+
+REQUEST_GET_STATUS
+{username: str}
+{status: int}
+
+REQUEST_GET_FRIEND_LIST
+{username: str}
+{friends: str}
+
+REQUEST_GET_IP
+{username: str}
+{ip: str}
+
+REQUEST_ADD_FRIEND
+{sender: str, receiver: str, time: str}
+{success: int}
+
+REQUEST_SEND_TEXT
+{sender: str, receiver: str, time: str, text: str}
+{success: int}
+
+REQUEST_SEND_FILE_INFO
+{sender: str, receiver: str, time: str, fileName: str, fileMD5: str, fileLength: int}
+{success: int}
+
+REQUEST_SEND_FILE
+{sender: str, receiver: str, time: str, fileMD5: str, fileIndex: int, fileData: String}
+{success: int}
+
+REQUEST_CONNECT_TO
+{friendName: str}
+{success: int, friendIP: str, friendServerPort: int}
